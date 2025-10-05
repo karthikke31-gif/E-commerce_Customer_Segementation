@@ -36,6 +36,48 @@ Helps identify **high-value**, **medium-value**, and **low-value** customers for
 
 **Notes:** Includes cancellations and special codes (e.g., postage fees).  
 
+## 📝 Usage
+
+Run the notebook sequentially:
+
+1. **Data Cleaning & Preprocessing**  
+2. **Exploratory Data Analysis (EDA)**  
+3. **Feature Engineering (RFM metrics)**  
+4. **Clustering (K-Means, k=3)**  
+5. **Visualization of Customer Segments**  
+
+---
+
+## 📈 Insights
+
+- **High-Value:** Frequent, recent buyers  
+- **Medium-Value:** High-volume, high-value  
+- **Low-Value:** Infrequent, older purchases  
+
+---
+
+## 💡 Business Recommendations
+
+- **High-Value:** VIP programs, personalized offers  
+- **Medium-Value:** Upsell bundles, frequency incentives  
+- **Low-Value:** Re-engagement campaigns, discounts for repeat purchases  
+
+---
+
+## ⚠️ Limitations
+
+- Static dataset (no real-time updates)  
+- No demographic or external features included  
+- Assumes spherical clusters (other clustering methods may improve accuracy)  
+
+---
+
+## 🚀 Future Work
+
+- Churn prediction using machine learning  
+- Customer lifetime value forecasting  
+- Deploy as an interactive web app for segmentation
+
 ---
 
 ## ⚙️ Installation
@@ -46,53 +88,3 @@ cd ecommerce-customer-segmentation
 
 # Install dependencies
 pip install -r requirements.txt
-
-# Place data.csv in root directory
-
-Run sequentially:
-
-Data cleaning & preprocessing
-
-Exploratory Data Analysis (EDA)
-
-Feature engineering (RFM metrics)
-
-Clustering (K-Means, k=3)
-
-Visualization of customer segments
-
-## Insights:
-
-High-Value → Frequent, recent buyers
-
-Medium-Value → High-volume, high-value
-
-Low-Value → Infrequent, older purchases
-
-💡 Business Recommendations
-
-High-Value: VIP programs, personalized offers
-
-Medium-Value: Upsell bundles, frequency incentives
-
-Low-Value: Re-engagement campaigns, discounts for repeat purchases
-
-⚠️ Limitations
-
-Static dataset (no real-time updates)
-
-No demographic or external features
-
-Assumes spherical clusters (other clustering methods may improve accuracy)
-
-🚀 Future Work
-
-Churn prediction using ML
-
-Customer lifetime value forecasting
-
-Deploy as interactive web app for segmentation
-
-📄 License
-
-MIT License – see LICENSE
