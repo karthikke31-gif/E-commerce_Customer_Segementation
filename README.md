@@ -83,7 +83,7 @@ Run the notebook sequentially:
 ## ⚙️ Installation
 ```bash
 # Clone repository
-git clone https://github.com/your-username/ecommerce-customer-segmentation.git
+git clone [https://github.com/your-username/ecommerce-customer-segmentation.git](https://github.com/karthikke31-gif/E-commerce_Customer_Segementation/tree/main)
 cd ecommerce-customer-segmentation
 
 # Install dependencies
