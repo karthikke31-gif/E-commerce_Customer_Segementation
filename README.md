@@ -42,18 +42,50 @@ pip install -r requirements.txt
 1.Place df_cleaned.csv in the root directory.
 2.Open Online_Retail_Dashboard.pbix in Power BI Desktop.
 3.Click Refresh to load and visualize the data.
+---
+---
 
-💡 Key Insights
+### 📝 Usage
 
-High-Value Customers: Frequent and recent buyers — ideal for loyalty programs.
+Run the Jupyter notebook sequentially to reproduce the full analysis pipeline:
 
-Medium-Value Customers: Good purchase volume — target with upsell offers.
+1. **Data Cleaning & Preprocessing**  
+   - Remove nulls, duplicates, and invalid transactions  
+   - Handle cancellations and compute total sales value (`TotalPrice = Quantity * UnitPrice`)
 
-Low-Value Customers: Low frequency — engage via discount campaigns.
+2. **Exploratory Data Analysis (EDA)**  
+   - Analyze customer purchase patterns, frequency, and sales distribution  
+   - Visualize revenue by country, time, and customer segments  
 
-Peak Sales: Observed around holiday months (e.g., December).
+3. **Feature Engineering (RFM Metrics)**  
+   - Calculate **Recency**, **Frequency**, and **Monetary Value** for each customer  
+   - Normalize and prepare features for clustering  
 
-Cancellation Rate: ~2–3% — requires policy monitoring.
+4. **Clustering (K-Means, k=3)**  
+   - Apply K-Means clustering to segment customers  
+   - Use PCA for dimensionality reduction and visualization  
+
+5. **Visualization of Customer Segments**  
+   - Plot clusters to identify High-, Medium-, and Low-Value customers  
+   - Generate insights for marketing and retention strategies  
+
+---
+
+### 📈 Insights
+
+| Segment | Characteristics | Behavior |
+|----------|-----------------|-----------|
+| **High-Value** | Frequent, recent buyers | Generate majority of revenue |
+| **Medium-Value** | Moderate purchase volume | Regular but not premium customers |
+| **Low-Value** | Infrequent or old purchases | Low activity, need re-engagement |
+
+---
+
+### 💡 Business Recommendations
+
+| Segment | Actionable Strategy | Goal |
+
+---
 
 ### 🧮 DAX Measures Used
 - DAX 
