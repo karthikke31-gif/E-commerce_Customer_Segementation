@@ -1,9 +1,3 @@
-git add screenshots/
-git commit -m "Image of Customer"
-git push
-
-
-
 # 🛒 E-Commerce Customer Segmentation & Power BI Dashboard
 
 ### 📘 Overview
@@ -29,9 +23,10 @@ It combines RFM analysis, K-Means clustering, and descriptive analytics to under
 - **Cancellation Analysis:** Track return and refund impact over time  
 - **Interactive Slicers:** Filter by Country, Date Hierarchy, and Cancellation Status  
 
-### 🖼️ Dashboard Previews
-Image of Customer.png
-![Dashboard Overview](Image of Customer.png)
+### 🖼️ Dashboard Preview
+
+![E-commerce Customer Dashboard](https://github.com/karthikke31-gif/E-commerce_Customer_Segementation/blob/cc68cf665057b2d6ab2d1ee3500e6d4b549f9fcd/Image%20of%20Customer.PNG?raw=true)
+
 
 ---
 
