@@ -1,16 +1,158 @@
-# 🛒 E-Commerce Customer Segmentation & Power BI Dashboard
+# Customer Segmentation & Churn Prediction | Machine Learning Project & Power BI Dashboard
 
 ### 📘 Overview
 This project extends the **E-commerce Customer Segmentation** analysis by integrating a **Power BI Dashboard** for interactive visualization and insights.  
 It combines RFM analysis, K-Means clustering, and descriptive analytics to understand customer behavior and revenue drivers.
 
+
+This project performs **end-to-end customer analytics** using real retail transaction data, including:
+
+✅ Data Cleaning & Feature Engineering  
+✅ Unsupervised Learning (Customer Segmentation)  
+✅ Supervised Learning (Churn Prediction)  
+✅ PCA for Dimensionality Reduction  
+✅ Model Evaluation & Business Recommendations  
+
 ---
 
-### 🎯 Objectives
-- Segment customers based on purchasing behavior and frequency  
-- Identify high-, medium-, and low-value customer groups  
-- Visualize key KPIs and purchasing trends in Power BI  
-- Support targeted marketing and customer retention strategies  
+
+---
+
+## 🎯 Project Objective
+
+To understand customer behavior, classify customers into actionable segments, and **predict churn probability** to support retention & marketing strategies.
+
+---
+
+## 📦 Dataset Overview
+
+- **406,829 transactions**
+- **4,339 customers**
+- **37 countries**
+- 8 key retail variables used:
+  `InvoiceNo`, `StockCode`, `Description`, `Quantity`,  
+  `InvoiceDate`, `UnitPrice`, `CustomerID`, `Country`
+
+---
+
+## 🧹 Data Cleaning
+
+- Removed null `CustomerID` (~24.9%)
+- Cleaned text descriptions & corrected spellings
+- Handled cancellation invoices (~16%)
+- Final dataset after cleaning: **392,857 valid transactions**
+
+---
+
+## 🛠️ Feature Engineering
+
+Customer-level features created:
+
+| Category | Features |
+|---|---|
+Engagement | # Transactions, Frequency  
+Value | Total Spend, Avg Spend, Quantity  
+Lifecycle | Recency, Customer Lifespan  
+
+➡️ PCA applied — **95.6% variance explained by first 6 components**
+
+---
+
+## 🤖 Machine Learning Approach
+
+### 📊 Segmentation (Unsupervised Learning)
+| Method | Result |
+|---|---|
+K-Means (k=3) | 3 customer clusters identified  
+Metric | Silhouette Score optimization  
+
+### 👥 Customer Segments
+
+| Segment | Profile | Count | Insight |
+|---|---|---|---|
+High-Value | Loyal, frequent buyers | 2,517 | Sales growth potential |
+Medium-Value | Irregular buyers | 1,802 | **High churn risk** |
+Low-Value (VIP) | Sparse, big orders | 20 | Personalized attention |
+
+---
+
+## 🔁 Churn Labeling Strategy
+
+- **Churn definition:** No purchase in last **90 days**
+- Churn % ≈ **33%**
+- Train-test split with **stratified sampling**
+- Removed low-value VIP outliers to avoid bias
+
+---
+
+## 🧠 Predictive Models
+
+| Model | Accuracy | AUC-ROC | Notes |
+|---|---|---|---|
+Logistic Regression | 76% | 0.80 | Strong baseline  
+Random Forest | 73% | 0.795 | Great interpretability  
+SVM (PCA) | 61% | 0.719 | High recall, low precision  
+**Ensemble (Best)** | **75%** | **0.815** | Most stable & best AUC |
+
+### 🧾 Feature Importance (Random Forest)
+
+1. Total Spending  
+2. Purchase Frequency  
+3. Segment (Medium most risky)  
+4. # Transactions  
+
+---
+
+## 🧠 Key Insights
+
+### 🔥 Segment-Wise Churn
+
+| Segment | Churn Rate | Action |
+|---|---|---|
+High | ~13.5% | Upsell & loyalty rewards |
+Medium | ~61.4% | **Urgent re-engagement** |
+Low / VIP | N/A | High-touch concierge support |
+
+### 📌 Business Recommendations
+
+✅ Target Medium segment with retention offers  
+✅ Reward High-value customers (loyal base)  
+✅ Use spend + frequency signals to trigger churn alerts  
+
+---
+
+## 🛡️ Technical Stack
+
+| Category | Tools |
+|---|---|
+Language | Python  
+Libraries | Pandas, NumPy, Scikit-Learn, Matplotlib, Seaborn, NLTK  
+Techniques | PCA, Clustering, Logistic Regression, Ensemble Models  
+ML Metrics | Accuracy, Precision, Recall, F1, ROC-AUC  
+
+---
+
+## 📈 Results Summary
+
+| Metric | Score |
+|---|---|
+Best Model | **Ensemble**  
+Accuracy | **75%**  
+AUC | **0.815**  
+
+---
+
+## 📌 Future Improvements
+
+- Deploy model as an API / Web App
+- Add deep learning-based churn prediction
+- Real-time RFM + event based churn triggers
+- Power BI / Tableau dashboard integration
+
+---
+
+```bash
+
 
 ---
 
@@ -42,48 +184,6 @@ pip install -r requirements.txt
 1.Place df_cleaned.csv in the root directory.
 2.Open Online_Retail_Dashboard.pbix in Power BI Desktop.
 3.Click Refresh to load and visualize the data.
----
----
-
-### 📝 Usage
-
-Run the Jupyter notebook sequentially to reproduce the full analysis pipeline:
-
-1. **Data Cleaning & Preprocessing**  
-   - Remove nulls, duplicates, and invalid transactions  
-   - Handle cancellations and compute total sales value (`TotalPrice = Quantity * UnitPrice`)
-
-2. **Exploratory Data Analysis (EDA)**  
-   - Analyze customer purchase patterns, frequency, and sales distribution  
-   - Visualize revenue by country, time, and customer segments  
-
-3. **Feature Engineering (RFM Metrics)**  
-   - Calculate **Recency**, **Frequency**, and **Monetary Value** for each customer  
-   - Normalize and prepare features for clustering  
-
-4. **Clustering (K-Means, k=3)**  
-   - Apply K-Means clustering to segment customers  
-   - Use PCA for dimensionality reduction and visualization  
-
-5. **Visualization of Customer Segments**  
-   - Plot clusters to identify High-, Medium-, and Low-Value customers  
-   - Generate insights for marketing and retention strategies  
-
----
-
-### 📈 Insights
-
-| Segment | Characteristics | Behavior |
-|----------|-----------------|-----------|
-| **High-Value** | Frequent, recent buyers | Generate majority of revenue |
-| **Medium-Value** | Moderate purchase volume | Regular but not premium customers |
-| **Low-Value** | Infrequent or old purchases | Low activity, need re-engagement |
-
----
-
-### 💡 Business Recommendations
-
-| Segment | Actionable Strategy | Goal |
 
 ---
 
@@ -99,17 +199,10 @@ Run the Jupyter notebook sequentially to reproduce the full analysis pipeline:
 -)
 
 
-## 🗺️ Data Source
-
-- Dataset:
-
-- InvoiceNo, StockCode, Description, Quantity, InvoiceDate, UnitPrice, CustomerID, Country
-- Includes derived fields: TotalPrice = Quantity * UnitPrice, QuantityCanceled
 
 ## 🚀 Future Enhancements
 
 - Real-time Power BI Service integration
-- Churn prediction & CLV forecasting
 - Product category segmentation
 - Deployment as interactive web dashboard
 
