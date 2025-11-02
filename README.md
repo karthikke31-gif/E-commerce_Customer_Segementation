@@ -151,7 +151,7 @@ AUC | **0.815**
 
 ---
 
-```bash
+
 
 
 ---
@@ -167,7 +167,7 @@ AUC | **0.815**
 
 ### 🖼️ Dashboard Preview
 
-![E-commerce Customer Dashboard](https://github.com/karthikke31-gif/E-commerce_Customer_Segementation/blob/cc68cf665057b2d6ab2d1ee3500e6d4b549f9fcd/Image%20of%20Customer.PNG?raw=true)
+![E-commerce Dashboard](https://raw.githubusercontent.com/karthikke31-gif/E-commerce_Customer_Segementation/6fe57b58a4eddab518fe1e079c45fda3b6a86f20/Image%20of%20Customer.PNG)
 
 
 ---
