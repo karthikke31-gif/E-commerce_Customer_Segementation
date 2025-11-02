@@ -174,7 +174,7 @@ AUC | **0.815**
 
 ### ⚙️ Installation & Setup
 
-```bash
+
 # Clone the repository
 git clone https://github.com/karthikke31-gif/E-commerce_Customer_Segementation.git
 cd E-commerce_Customer_Segementation
