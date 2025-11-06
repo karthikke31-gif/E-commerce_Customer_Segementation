@@ -84,6 +84,18 @@ Low-Value (VIP) | Sparse, big orders | 20 | Personalized attention |
 - Removed low-value VIP outliers to avoid bias
 
 ---
+## 🌍 Geographical Churn
+-- United Kingdom:
+•	3,921 customers (~90% of total base)
+•	33.3% churn rate — stable baseline with strong engagement (avg. frequency 0.93 transactions/day)
+
+-- France & Germany:
+
+•	87 and 94 customers respectively
+•	Churn rates of 29.9% (France) and 26.6% (Germany) — slightly lower than UK but with reduced engagement (avg. frequency ~0.24/day in churned cohorts)
+•	These insights indicate that while churn rates are moderate across key markets, engagement intensity differs significantly by geography.
+
+---
 
 ## 🧠 Predictive Models
 
@@ -99,7 +111,7 @@ SVM (PCA) | 61% | 0.719 | High recall, low precision
 1. Total Spending  
 2. Purchase Frequency  
 3. Segment (Medium most risky)  
-4. # Transactions  
+ 
 
 ---
 
@@ -167,8 +179,7 @@ AUC | **0.815**
 
 ### 🖼️ Dashboard Preview
 
-![E-commerce Dashboard](https://raw.githubusercontent.com/karthikke31-gif/E-commerce_Customer_Segementation/6fe57b58a4eddab518fe1e079c45fda3b6a86f20/Image%20of%20Customer.PNG)
-
+![E-commerce Dashboard](https://github.com/karthikke31-gif/E-commerce_Customer_Segementation/blob/2b903851f956f020d4804e07982c0328b6b6d322/Image%20of%20Customer.PNG)
 
 ---
 
