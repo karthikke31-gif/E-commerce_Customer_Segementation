@@ -1,9 +1,7 @@
 # Customer Segmentation & Churn Prediction | Machine Learning Project & Power BI Dashboard
 
 ### 📘 Overview
-This project extends the **E-commerce Customer Segmentation** analysis by integrating a **Power BI Dashboard** for interactive visualization and insights.  
-It combines RFM analysis, K-Means clustering, and descriptive analytics to understand customer behavior and revenue drivers.
-
+This project extends Customer Segmentation analysis with enhanced insights into customer patterns, churn behavior, and retention strategies. 
 
 This project performs **end-to-end customer analytics** using real retail transaction data, including:
 
